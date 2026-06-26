@@ -1,10 +1,11 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master",
+	branch = "main",
+	-- event = { "BufReadPost", "BufNewFile" },
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter.configs").setup {
+		require("nvim-treesitter.config").setup {
 			ensure_installed = {
 				"typescript",
 				"tsx",
